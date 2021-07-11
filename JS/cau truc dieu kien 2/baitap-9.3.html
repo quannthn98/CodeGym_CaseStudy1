@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh chi so can nang</title>
+</head>
+<body>
+  <form>
+    <p>Cân nặng</p>
+    <input type="number" id = "weight" placeholder="kg">
+    <p>Chiều cao</p>
+    <input type="number" id="height" placeholder="cm"> <br>
+    <button type="button" onclick="tinhBmi()">Tính chỉ số Bmi</button>
+    <p id="demo"></p>
+  </form>
+  <script>
+
+    function tinhBmi(){
+      var w = parseInt(document.getElementById("weight").value);
+      var h = parseInt(document.getElementById("height").value);
+      let bmi = w/(h^2);
+      document.getElementById("demo").innerHTML = bmi;
+      if (bmi < 18.5){
+        alert('You are Underweight');
+      } else if ( bmi < 25) {
+        alert('you are Normal');
+      } else if (bmi < 30) {
+        alert('you are Overweight');
+      } else {
+        alert('Béo vcl')
+      }
+    }
+
+  </script>
+</body>
+</html>

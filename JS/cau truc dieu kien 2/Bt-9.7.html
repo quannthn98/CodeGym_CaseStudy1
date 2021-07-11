@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="check()">
+  <h1>Bạn muốn tìm mua điện thoại như thế nào?</h1>
+<!--  <button type="button" onclick="checkbox()"> click</button>-->
+  <input type="range" onclick="check(1)" min = "1" max = "2" style="width: 50px" id = "1" value="1"> Ngon <br>
+  <input type="range" onclick="check(2)" min = "1" max = "2" style="width: 50px" id = "2" value="1"> Bổ <br>
+  <input type="range" onclick="check(3)" min = "1" max = "2" style="width: 50px" id = "3" value="1"> rẻ <br>
+
+  <script>
+
+    function check(abc) {
+      let checkBar1 = document.getElementById("1");
+      let checkBar2 = document.getElementById("2");
+      let checkBar3 = document.getElementById("3");
+      if (abc == 1){
+        if (checkBar2.value === "2" && checkBar3.value === "2"){
+          checkBar3.value = "1";
+        }
+      } else if (abc == 2){
+        if (checkBar1.value === "2" && checkBar3.value === "2") {
+        checkBar1.value = "1";
+       }
+      } else if (abc == 3) {
+        if (checkBar1.value === "2" && checkBar2.value === "2") {
+          checkBar2.value = "1";
+        }
+      }
+    }
+
+  </script>
+
+</body>
+</html>

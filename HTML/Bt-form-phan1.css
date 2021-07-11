@@ -1,0 +1,31 @@
+.tieude {
+    display: inline-block;
+    margin-right: 400px;
+    margin-left: 10px;
+    border: 1px black;
+    background-color: lightblue;
+    text-align: right;
+}
+.sothich {
+    margin-right: 300px;
+    margin-left: 100px;
+    border: 1px black;
+    background-color: lightblue;
+}
+.ptieude {
+    color: blue;
+    text-align: right;
+}
+.inlinecol1 {
+    text-align: right;
+    display: inline-block;
+    margin-right: 350px;
+    margin-left: 10px;
+    background-color: lightblue;
+}
+.inlinecol2 {
+    text-align: right;
+    display: inline-block;
+    margin-right: 100px;
+    margin-left: 50px;
+}

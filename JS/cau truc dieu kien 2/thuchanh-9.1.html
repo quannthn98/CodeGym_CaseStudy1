@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Move the ball</title>
+</head>
+<body>
+    <div>
+      <img id="theball" src="https://images-na.ssl-images-amazon.com/images/I/61Jigwd1kKL._AC_SL1500_.jpg" style="width: 200px;height: 200px" alt="this is the ball">
+      <p> click the button to move the ball to t
+          he right</p>
+      <button type="button" id="clickme" onclick="moveRight()" > Click me</button>
+    </div>
+    <script>
+      let imgPosition = null;
+      imgPosition = document.getElementById("theball");
+      function setPosition(){
+        imgPosition = document.getElementById("theball");
+        imgPosition.style.position = 'relative';
+        imgPosition.style.marginLeft = '0px';
+      }
+      function moveRight(){
+        imgPosition.style.marginLeft = parseInt(imgPosition.style.marginLeft) + 10 + 'px';
+      }
+      window.onload = setPosition;
+    </script>
+</body>
+</html>

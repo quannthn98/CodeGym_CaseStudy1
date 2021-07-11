@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing js</title>
+</head>
+<body>
+<p onmouseover="changered()" onmouseout="changeback()" onclick="voice()" id="demo"> Hove to change color</p>
+<script>
+    function changered() {
+        document.getElementById("demo").style.color="red";
+    }
+    function changeback() {
+        document.getElementById("demo").style.color="black";
+    }
+    function voice() {
+        document.getElementById("demo").innerHTML = "get out";
+        document.getElementById("demo").style.fontSize   = "50px";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyen = mui ten</title>
+</head>
+<body onload="doready()">
+
+  <img  style="position: absolute;left: 10px; top: 10px;width: 100px;height: 100px" id="theball"src="https://images-na.ssl-images-amazon.com/images/I/61Jigwd1kKL._AC_SL1500_.jpg" alt="this is a ball">
+  <script>
+    let imgObj = null;
+    function moveUp(){
+      imgObj = document.getElementById("theball");
+      imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px';
+    }
+    function moveDown(){
+      imgObj = document.getElementById("theball");
+      imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';
+    }
+    function moveRight(){
+      imgObj = document.getElementById("theball");
+     imgObj.style.left = parseInt(imgObj.style.left) + 10+ 'px';
+    }
+    function moveLeft(){
+      imgObj = document.getElementById("theball");
+      imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+    }
+    function move(evt) {
+      switch (evt.keyCode) {
+        case 37 :
+          moveLeft();
+          break;
+        case 39:
+          moveRight();
+          break;
+        case 38:
+          moveUp();
+          break;
+        case 40:
+          moveDown();
+          break;
+      }
+    }
+    function doready(){
+      window.addEventListener('keydown', move);
+    }
+  </script>
+</body>
+</html>
+
+
+

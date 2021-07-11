@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game pulle</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<table id="demo">
+    <tr>
+        <td>
+            <div>
+                <img id = "1" src="dog2.1.png" onclick="changePic1(1)">
+            </div>
+        </td>
+        <td>
+            <div>
+                <img  id="2" src="dog3.1.jpeg" onclick="changePic1(2)">
+            </div>
+        </td>
+    </tr>
+</table>
+
+<script>
+    function changePic1(value){
+        let pickPic1;
+        let pickPic2;
+        let isRightPic1 = false;
+        let isRightPic2 = false;
+        let srcPic1;
+        let srcPic2;
+        switch(value){
+            case 1:
+                pickPic1 = Math.floor(Math.random() * 4) + 1;
+                if (pickPic1 == 1){
+                    document.getElementById("1").src = "dog1.2.png"
+                    isRightPic1 = true;
+                } else if (pickPic1 == 2){
+                    document.getElementById("1").src = "dog2.1.png"
+                    isRightPic1 = false;
+                } else {
+                    document.getElementById("1").src = "dog3.1.jpeg"
+                    isRightPic1 = false;
+                }
+
+                // sourcePic1 = document.getElementById("1").src;
+                break;
+            case 2:
+                pickPic2 = pickPic = Math.floor(Math.random() * 4) + 1;
+                if (pickPic2 == 1){
+                    document.getElementById("2").src = "dog1.1.jpg"
+                    // isRightPic2 = true;
+                } else if (pickPic2 == 2){
+                    document.getElementById("2").src = "dog2.2.jpg"
+                    // isRightPic2 = false;
+                } else {
+                    document.getElementById("2").src = "dog3.2.png"
+                    // isRightPic2 = false;
+                }
+
+                break;
+        }
+        srcPic1 = document.getElementById("1").src;
+        srcPic2 = document.getElementById("2").src;
+        console.log(srcPic1);
+        console.log(srcPic2);
+
+    }
+
+</script>
+
+
+
+</body>
+</html>
